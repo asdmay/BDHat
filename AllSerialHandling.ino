@@ -11,11 +11,16 @@ void serialOutput(){   // Decide How To Output Serial.
       sendDataToSerial('S', Signal);     // goes to sendDataToSerial function
       break;
     case SERIAL_PLOTTER:  // open the Arduino Serial Plotter to visualize these data
+      Serial.print("BPM");
       Serial.print(BPM);
       Serial.print(",");
+      Serial.print("IBI");
       Serial.print(IBI);
       Serial.print(",");
+      Serial.println("Signal");
       Serial.println(Signal);
+      Serial.println("count");
+      Serial.println(count);
       break;
     default:
       break;
